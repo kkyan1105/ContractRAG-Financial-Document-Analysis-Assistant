@@ -341,26 +341,7 @@ This system does not store your questions. However, queries are
 sent to OpenAI's API. Do not include personal financial details.
 ```
 
-**3. Fairness in Analysis**
-
-**Approach:** Present facts, not judgments
-
-| ❌ Biased | ✅ Neutral |
-|----------|-----------|
-| "This 29.99% APR is excessive" | "The penalty APR is 29.99%" |
-| "This is unfair to consumers" | "Section 6 states the terms" |
-
 ---
-可以删掉以下
-**🔍 Transparency Measures**
-
-To maintain trust and enable verification:
-
-1. **📄 Source Citations** - Every answer shows which chunks were used
-2. **🔗 Verifiable Claims** - Users can click to see original sections
-3. **⚠️ Confidence Signals** - Explicitly states when info not found
-4. **📖 Open Source** - Full code on GitHub for audit
-5. **📊 Documentation** - All model versions and limitations stated
 
 ## 💭 Critical Analysis
 
