@@ -373,18 +373,6 @@ if st.button("🔍 Get Answer") and question:
 - **Solution**: 50-character overlap between chunks
 - **Result**: Key terms not split across boundaries
 
-**Challenge 3: API Version Compatibility**
-- **Problem**: OpenAI API v1.0+ has breaking changes
-- **Solution**: Use new client-based API format
-```python
-# Old (doesn't work)
-openai.ChatCompletion.create(...)
-
-# New (works)
-client = OpenAI()
-client.chat.completions.create(...)
-```
-
 ---
 
 ## 🎬 Demo
