@@ -268,35 +268,42 @@ License: Commercial (API key required)
 **🎯 Identified Biases**
 
 **1. Language Model Bias**
-
-Source: GPT-3.5 trained on internet data  
+```
+Source: GPT-3.5 trained on internet data
 Impact: May reflect societal biases in financial language
+Example: Could favor institutional phrasing over consumer-friendly language
+```
 
-Mitigation:
+**Mitigation:**
 - ✅ Temperature=0.3 for consistency
 - ✅ Explicit "plain language" prompts
-- ✅ Show source text for verification
+- ✅ Show source text for user verification
 
 **2. Retrieval Bias**
-
-Source: Semantic similarity limitations  
-Impact: Certain phrasings favored  
+```
+Source: Semantic similarity limitations
+Impact: Certain phrasings favored in retrieval
 Example: "penalty fee" retrieves better than "additional charges"
+```
 
-Mitigation:
+**Mitigation:**
 - ✅ Retrieve top-3 chunks for diversity
 - ✅ Display all sources to users
-- ✅ Chunk overlap captures context
+- ✅ Chunk overlap captures context variations
 
 **3. Financial Literacy Gap**
-
-Source: Assumes baseline understanding  
+```
+Source: Assumes baseline understanding
 Impact: May disadvantage users with limited knowledge
+Example: Terms like "APR" used without definition
+```
 
-Mitigation:
+**Mitigation:**
 - ✅ Plain language responses
 - ✅ Direct quotes from contract
-- ✅ Link to original sections
+- ✅ Link to original sections for full context
+
+---
 
 **⚖️ Ethical Concerns & Safeguards**
 
@@ -304,43 +311,56 @@ Mitigation:
 
 Concern: Wrong answers → financial mistakes
 
-Safeguards:
-- ⚠️ "Not legal/financial advice" disclaimer
-- 📄 Source citations for every answer
-- 🔗 Link to original document
-- ✓ States when info not found
+**Safeguards:**
+- ⚠️ **Disclaimer**: "Not legal/financial advice" displayed prominently
+- 📄 **Citations**: Source citations for every answer
+- 🔗 **Verification**: Link to original document sections
+- ✓ **Confidence**: States when info not found (no guessing)
+
+**Example Implementation:**
+```python
+DISCLAIMER = """
+⚠️ This system provides information only, not legal or financial advice.
+Always verify important details in the original contract.
+"""
+```
 
 **2. Privacy & Data Security**
 
-Protections:
-- ✅ No data logging
-- ✅ Local vector DB (no cloud)
-- ✅ Session-based (cleared on close)
-- ⚠️ OpenAI API sees queries (per their policy)
+Concern: User questions might reveal personal financial situations
 
-**3. Accessibility & Equity**
+**Protections:**
+- ✅ **No Logging**: Questions not stored beyond session
+- ✅ **Local Storage**: Vector DB stored locally (no cloud sync)
+- ✅ **Session-Based**: Data cleared when browser closes
+- ⚠️ **API Limitation**: OpenAI API sees queries (per their policy)
 
-Current limitations:
-- Requires internet for API
-- Minimal API cost (~$0.01/10 questions)
+**Privacy Notice:**
+```
+This system does not store your questions. However, queries are 
+sent to OpenAI's API. Do not include personal financial details.
+```
 
-**4. Fairness in Analysis**
+**3. Fairness in Analysis**
 
-Approach: Present facts, not judgments
+**Approach:** Present facts, not judgments
 
-Example:
-- ❌ Biased: "This 29.99% APR is excessive"
-- ✅ Neutral: "The penalty APR is 29.99%"
-
-**🔍 Transparency Measures**
-
-1. **Source Citations** - Every answer shows chunks used
-2. **Verifiable Claims** - Click to see original sections
-3. **Confidence Signals** - States when info not found
-4. **Open Source** - Full code on GitHub for audit
-5. **Model Documentation** - All versions explicitly stated
+| ❌ Biased | ✅ Neutral |
+|----------|-----------|
+| "This 29.99% APR is excessive" | "The penalty APR is 29.99%" |
+| "This is unfair to consumers" | "Section 6 states the terms" |
 
 ---
+可以删掉以下
+**🔍 Transparency Measures**
+
+To maintain trust and enable verification:
+
+1. **📄 Source Citations** - Every answer shows which chunks were used
+2. **🔗 Verifiable Claims** - Users can click to see original sections
+3. **⚠️ Confidence Signals** - Explicitly states when info not found
+4. **📖 Open Source** - Full code on GitHub for audit
+5. **📊 Documentation** - All model versions and limitations stated
 
 ## 💭 Critical Analysis
 
