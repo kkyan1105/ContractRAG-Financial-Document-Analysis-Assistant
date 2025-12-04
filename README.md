@@ -71,25 +71,7 @@ A **Retrieval-Augmented Generation (RAG)** system that:
 | **Web Framework** | Streamlit v1.28.0 | User interface |
 
 ### RAG Pipeline
-```
-PDF Document
-    ↓
-Text Extraction & Chunking (500 chars, 50 overlap)
-    ↓
-Embedding Model (384-dim vectors)
-    ↓
-ChromaDB (Vector Storage)
-    ↓
-User Query → Query Embedding
-    ↓
-Semantic Search (Top-3 similar chunks)
-    ↓
-GPT-3.5-turbo (Context + Query → Answer)
-    ↓
-Answer + Citations
-```
-
-> **Image placeholder:** System architecture diagram
+<p align="center"> <img src="figs/architecture.png" width="40%"> </p>
 
 ---
 
