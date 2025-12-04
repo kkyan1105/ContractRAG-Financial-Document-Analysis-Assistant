@@ -1,6 +1,6 @@
 # 💳 Bank Contract QA Assistant
 
-**A RAG-Based System for Analyzing Credit Card Agreements**
+**A RAG-Based System for Analyzing Bank Agreements**
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-red.svg)](https://streamlit.io/)
