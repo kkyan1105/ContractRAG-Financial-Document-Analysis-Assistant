@@ -8,6 +8,14 @@
 
 ---
 
+
+## 
+
+**Yan Zhang**  
+Vanderbilt University | DS 5690 | Fall 2025  
+
+---
+
 ## 📋 Table of Contents
 
 - [Problem Statement & Overview](#-problem-statement--overview)
@@ -529,13 +537,6 @@ Opens at http://localhost:8501
 
 MIT License - see [LICENSE](LICENSE)
 
----
-
-## 👤 Author
-
-**[Your Name]**  
-[Your University] | [Course Name] | Fall 2024  
-📧 [Your Email]
 
 ---
 
